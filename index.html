@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Civique 2026 Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            color: white;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 40px;
+            align-items: start;
+        }
+
+        .text-section {
+            padding-right: 20px;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            position: sticky;
+            top: 20px;
+        }
+
+        .phone-mockup {
+            max-width: 85%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border: 8px solid #1a1a1a;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            color: #555;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .info-box p {
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .info-box ul li {
+            padding: 8px 0;
+            color: #555;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .info-box ul li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .links-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .links-section h2 {
+            margin-top: 0;
+        }
+
+        .link-item {
+            display: block;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(94, 114, 228, 0.4);
+            margin-top: 20px;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(94, 114, 228, 0.5);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(94, 114, 228, 0.3);
+        }
+
+        .cta-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .cta-box p {
+            color: white;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links a {
+            color: #a8b5ff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .image-section {
+                order: -1;
+                position: relative;
+                margin-bottom: 30px;
+            }
+
+            .text-section {
+                padding-right: 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🇫🇷 Examen Civique 2026</h1>
+        <p class="subtitle">Your Path to French Citizenship</p>
+    </header>
+
+    <div class="content">
+        <div class="text-section">
+            <h2>About the App</h2>
+            <p class="intro-text">
+                Examen Civique 2026 helps you prepare quickly and confidently for the official examen civique — the civic-knowledge exam required for the multi-year residence permit (carte de séjour pluriannuelle) and for the resident card and naturalisation (carte de résident). The questions are based on the official lists published by the Ministère de l'Intérieur. The app contains all 366 official knowledge questions, updated for 2026.
+            </p>
+            <p class="intro-text">
+                With realistic exam simulations, CSP/CR list selection, and smart analytics, you get exactly the training you need to pass the examen civique and take the next step toward French citizenship.
+            </p>
+
+            <h2>✔️ Features</h2>
+            <ul class="features">
+                <li>All 366 official examen civique knowledge questions for 2026</li>
+                <li>Exam simulation under real test conditions (40-question format, 45 minutes, 80% to pass)</li>
+                <li>Choose your list: CSP (residence permit) or CR (resident card &amp; naturalisation)</li>
+                <li>Category-based practice (Principles &amp; values of the Republic, Institutions, Rights &amp; duties, History &amp; geography &amp; culture, Living in French society)</li>
+                <li>Progress analysis &amp; personal statistics</li>
+                <li>Targeted review of incorrectly answered questions</li>
+                <li>Available offline &amp; translations in many languages</li>
+                <li>Modern, intuitive interface</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>📘 Why This App?</h3>
+                <p>
+                    This app contains all the content you need for the examen civique – clearly structured, up-to-date, and easy to understand. Whether you're just starting or your test date is approaching: The app guides you step by step to a successful exam.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>💬 Who Should Use This App?</h3>
+                <ul>
+                    <li>People seeking French citizenship or a residence permit</li>
+                    <li>Anyone wanting to pass the official examen civique</li>
+                    <li>Applicants for the carte de séjour pluriannuelle (CSP) or carte de résident (CR)</li>
+                    <li>People who want to improve their knowledge about France and its values</li>
+                </ul>
+            </div>
+
+            <div class="cta-box">
+                <h3>🎯 Your Path to French Citizenship</h3>
+                <p>
+                    Start your preparation now and pass the examen civique – confidently, targeted, and stress-free.
+                </p>
+            </div>
+
+            <h2>Contact & Support</h2>
+            <p>
+                Have questions, suggestions, or need help? We're here for you!
+            </p>
+            <a href="mailto:meliksahcakirr@gmail.com" class="contact-button">
+                ✉️ Contact Us
+            </a>
+        </div>
+
+        <div class="image-section">
+            <img src="app-screenshot.png" alt="Examen Civique App Screenshot" class="phone-mockup">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Examen Civique 2026. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <span style="color: rgba(255, 255, 255, 0.3);">|</span>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
